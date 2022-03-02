@@ -2,7 +2,7 @@
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const comment_text = document
+  const comment_body = document
     .querySelector('textarea[name="comment-body"]')
     .value.trim();
 
@@ -10,12 +10,12 @@ const commentFormHandler = async (event) => {
     window.location.toString().split("/").length - 1
   ];
 
-  if (comment_text) {
+  if (comment_body) {
     const response = await fetch("/api/comments", {
       method: "POST",
       body: JSON.stringify({
         post_id,
-        comment_text,
+        comment_body,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +25,7 @@ const commentFormHandler = async (event) => {
     if (response.ok) {
       document.location.reload();
     } else {
-      alert(response.statusText);
+      alert("Failed to comment.");
     }
   }
 }
