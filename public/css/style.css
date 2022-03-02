@@ -1,9 +1,9 @@
 :root {
-  --primary: #ccdad1;
-  --secondary: #9caea9;
-  --tertiary: #788585;
-  --light-dark: #6f6866;
-  --dark: #170f0c;
+  --primary: #b2d8d8;
+  --secondary: #66b2b2;
+  --tertiary: #008080;
+  --light-dark: #006666;
+  --dark: #004c4c;
   --border-radius: 0.3rem;
 }
 
@@ -15,7 +15,7 @@ body {
   background-color: var(--primary);
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: 'Hubballi', cursive;
   color: var(--dark);
   line-height: 1.5;
   font-size: 16px;
@@ -216,10 +216,18 @@ article a {
   /* border-radius: var(--border-radius); */
 }
 
+.comment-card {
+  margin-left: 30px;
+}
+
 .card-header {
   color: var(--primary);
   background-color: var(--dark);
   padding: 1%;
+}
+
+.card-header-text {
+  font-size: 1.6rem;
 }
 
 .card-body {
@@ -257,6 +265,11 @@ article a {
   min-width: 60%;
   min-height: 30px;
 }
+
+#back-button {
+  color: var(--dark);
+}
+
 /* HEIGHT / WIDTH UTILS */
 .min-100-vh {
   min-height: 100vh;
