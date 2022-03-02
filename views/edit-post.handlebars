@@ -1,0 +1,24 @@
+<!-- This is the template for when the user decides to click on "edit post"-->
+<div>
+    <a id="back-button" href="/dashboard">&larr; Back to dashboard</a>
+
+    <h2>Edit Post</h2>
+
+    <form class="edit-post-form" data-id="{{post.id}}">
+
+        <div class="card">
+            <div class="card-body">
+                Title:<br><input name="post-title" type="text" value="{{post.post_title}}" id="post-title" /><br>
+                Body:<textarea name="post-body" class="edit-content">{{post.post_body}}</textarea>
+            </div>
+
+            <button type="submit" class="btn" data-id="{{post.id}}">Finish editing post</button>
+            <button type="button" class="btn" id="delete-post-btn" data-id="{{post.id}}">Delete this post instead</button>
+        </div>
+
+    </form>
+
+</div>
+
+<script src="/js/edit-post.js"></script>
+<script src="/js/delete-post.js"></script>
