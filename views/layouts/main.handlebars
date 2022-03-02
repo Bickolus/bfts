@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Blog For Tech Stuff</title>
+</head>
+
+<body>
+
+    <!-- Nav Bar/Hero -->
+    <div class="wrapper">
+
+        <header class="hero">
+            <nav>
+                <a href="/">Home</a>
+                {{#if logged_in}}
+                <a href="/dashboard">Dashboard</a>
+                <button id="logout" class="btn-no-style">Logout</button>
+                {{else}}
+                <a href="/login">Login or Sign Up</a>
+                {{/if}}
+            </nav>
+            <h1 class="app-title">Blog For Tech Stuff</h1>
+        </header>
+
+        <main>
+            <div class="col-12">
+
+                {{{ body }}}
+
+            </div>
+        </main>
+
+    </div>
+
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>
