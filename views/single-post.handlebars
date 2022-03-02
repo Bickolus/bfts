@@ -1,0 +1,23 @@
+<!-- Displays a post and the comments associated with it -->
+{{> post-details post }}
+{{> comment post.comments}}
+
+<!-- If the user is logged in, display a form that allows user to add a comment and enable commenting script -->
+{{#if logged_in}}
+<div class="card">
+	<form class="comment-form">
+		<h3 class="card-header">New comment:</h3>
+		<div class="card-body">
+			<div>
+				<textarea name="comment-body"></textarea>
+			</div>
+
+			<div>
+				<button type="submit" class="btn">Add comment</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<script src="/js/comment.js"></script>
+{{/if}}
