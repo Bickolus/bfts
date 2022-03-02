@@ -1,0 +1,10 @@
+<!-- This displays everybody's blog posts in the front page -->
+<div class="list-group">
+    <div class="post-list">
+        {{#each posts as |post|}}
+        <li>
+            {{> post-details post }}
+        </li>
+        {{/each}}
+    </div>
+</div>
