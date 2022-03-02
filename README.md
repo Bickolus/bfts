@@ -10,7 +10,7 @@ This application has been deployed to Heroku for testing purposes. You are more 
 
 > Github Repository Link: [https://github.com/Bickolus/ecbe](https://github.com/Bickolus/bfts)
 >
-> Deployed App (Heroku) Link: 
+> Deployed App (Heroku) Link: [https://blog-for-tech-stuff.herokuapp.com/](https://blog-for-tech-stuff.herokuapp.com/)
 
 ## Table of Contents
 
@@ -32,9 +32,17 @@ Alternatively, check out the deployed Heroku link if you wish to utilize the sit
 
 ## Example
 
-### Gifs of the Program Running
+### Homepage
+![1st screenshot of BFTS deployed](./images/bfts1.png)
 
-![screenshot of BFTS deployed](./images/bfts1.png)
+### Login/Sign Up Screen
+![2nd screenshot of BFTS deployed](./images/bfts2.png)
+
+### Dashboard
+![3rd screenshot of BFTS deployed](./images/bfts3.png)
+
+### Individual post + comments
+![4th screenshot of BFTS deployed](./images/bfts4.png)
 
 ## License
 
