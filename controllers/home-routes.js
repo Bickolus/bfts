@@ -7,6 +7,7 @@ router.get("/", async (req, res) => {
   try {
     // Get all posts and JOIN with user data
     const postData = await Post.findAll({
+      attributes: ["id", "post_title", "post_body", "date_created"],
       include: [
         {
           model: User,
@@ -32,6 +33,7 @@ router.get("/", async (req, res) => {
 router.get("/post/:id", async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
+      attributes: ["id", "post_title", "post_body", "date_created"],
       include: [
         {
           model: User,
@@ -44,7 +46,7 @@ router.get("/post/:id", async (req, res) => {
             "comment_body",
             "post_id",
             "user_id",
-            "created_at",
+            "date_created",
           ],
           include: {
             model: User,
@@ -56,10 +58,7 @@ router.get("/post/:id", async (req, res) => {
 
     const post = postData.get({ plain: true });
 
-    res.render("post", {
-      ...post,
-      logged_in: req.session.logged_in,
-    });
+    res.render("single-post", { post, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -101,7 +100,7 @@ router.get("/dashboard/edit/:id", withAuth, async (req, res) => {
             "comment_body",
             "post_id",
             "user_id",
-            "created_at",
+            "date_created",
           ],
           include: {
             model: User,
